@@ -1,6 +1,6 @@
 # Gestión de Arrays
 
-Proyecto que implementa una clase (HandlingArray) que permite gestionar un arreglo de valores numéricos enteros. El desarrollo se realiza a través de un equipo de trabajo de estudiantes de materia del Programación del Programa de Ingeniería de Sistemas y Computación de la [uptc](www.uptc.edu.co)
+Proyecto que implementa una clase (HandlingArray) que permite gestionar un arreglo de valores numéricos enteros. El desarrollo se realiza a través de un equipo de trabajo de estudiantes de materia del Programación del Programa de Ingeniería de Sistemas y Computación de la [uptc](http://www.uptc.edu.co)
 
 ## Elementos de la Clase
 
@@ -20,7 +20,7 @@ Proyecto que implementa una clase (HandlingArray) que permite gestionar un arreg
 -  __sortSelection__ Método que ordena el arreglo por medio del algoritmo de Selección. Retorna un arreglo con los elementos ordenados
 -  __sortBurbble__ Método que ordena el arreglo por medio del algoritmo de Burbuja. Retorna un arreglo con los elementos ordenados
 -  __sortInsertion__ Método que ordena el arreglo por medio del algoritmo de inserción. Retorna un arreglo con los elementos ordenados
--  __sortShell Método que ordena el arreglo por medio del algoritmo de Shell. Retorna un arreglo con los elementos ordenados
+-  __sortShell__ Método que ordena el arreglo por medio del algoritmo de Shell. Retorna un arreglo con los elementos ordenados
 - __findElement__ Método que busca un element en forma secuencial. Recibe el elemento a buscar. Retorna la posición del primer elemento encontrado, o -1 si no existe
 - __findElementBinary__ Método que busca un element aplicando el algoritmo de búsqueda binaria. Recibe el elemento a buscar. Retorna la posición del primer elemento encontrado, o -1 si no existe
 - __countElements__ Método que retorna una matriz indicando para cada elemento del arreglo, cuantas veces se repite.
@@ -32,6 +32,7 @@ Proyecto que implementa una clase (HandlingArray) que permite gestionar un arreg
 ## Responsables
 
 |Método|Responsable|
+|--|--|
 |sortSelection|Andrés Mateus|
 |sortBurbble|Dumar Malpica|
 |sortInsertion|Mauricio Vargas|
@@ -42,7 +43,7 @@ Proyecto que implementa una clase (HandlingArray) que permite gestionar un arreg
 
 ## Instrucciones
 
-- Cree una nueva versión del proyecto en su repositorio (fork)
+- Cree una nueva versión del proyecto en su repositorio (`fork`)
 - Clone su copia
 - Escriba las instrucciones para el método correspondiente
 - Actualice su repositorio
