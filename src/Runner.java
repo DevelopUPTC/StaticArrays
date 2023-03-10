@@ -15,6 +15,10 @@ public class Runner {
 		
 		System.out.println( Arrays.toString( handlingArray.getArray()));
 
+		
+		System.out.println("\nMétodo sortInsertion");
+		System.out.println( Arrays.toString(handlingArray.sortInsertion()) );
+
 	}
 
 }
