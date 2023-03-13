@@ -42,7 +42,10 @@ class HandlingArrayTest {
 
 	@Test
 	void testSortInsertion() {
-		fail("Not yet implemented");
+		int[] array = new int[] {12,546,72,6,75,90,2000,53,49,1,12,1,10,10,10,6,6,2000};
+		HandlingArray handling = new HandlingArray( array );
+		System.out.println( Arrays.toString( handling.getArray()));
+		System.out.println( Arrays.toString( handling.sortInsertion()));
 	}
 
 	@Test
