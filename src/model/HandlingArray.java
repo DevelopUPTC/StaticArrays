@@ -107,8 +107,21 @@ public class HandlingArray {
 	 * responsable: Mauricio Vargas
 	 */
 	public int[] sortInsertion() {
-		int[] arraySort = new int[ array.length ];
+		//int[] arraySort = new int[array.length];
+		int[] arraySort = array.clone();
+		int position;
+		int aux;
 		
+		for(int i=0; i<arraySort.length; i++) {
+			position = i;
+			aux=arraySort[i];
+		
+			while((position>0) && arraySort[position-1] > aux){
+				arraySort[position] = arraySort[position-1];
+				position--;
+			}
+			arraySort[position] = aux;
+		}	
 		return arraySort;
 	}
 	
