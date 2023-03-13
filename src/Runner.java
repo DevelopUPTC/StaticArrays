@@ -14,6 +14,7 @@ public class Runner {
 		handlingArray.getArray()[0] = 2523;
 		
 		System.out.println( Arrays.toString( handlingArray.getArray()));
+		System.out.println(Arrays.toString(handlingArray.sortSelection()));
 
 	}
 
