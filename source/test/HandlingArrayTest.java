@@ -1,5 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
 
 import model.HandlingArray;
@@ -11,6 +13,7 @@ class HandlingArrayTest {
 		int[] array = new int[] {12,546,72,6,75,90,2000};
 		HandlingArray handlingArray = new HandlingArray( array );
 		assertArrayEquals(new int[] {6,12,72,75,90,546,2000}, handlingArray.sortSelection());;
+		System.out.println( Arrays.toString( handlingArray.getArray()));
 	}
 	
 	@Test
