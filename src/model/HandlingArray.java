@@ -2,6 +2,7 @@ package model;
 
 import java.util.Arrays;
 import java.util.Random;
+
 /**
  * Clase que gestiona un arreglo de enteros
  * @author jairo
@@ -184,14 +185,29 @@ public class HandlingArray {
 	
 	/**
 	 * Método que elimina un elemento del arreglo
-	 * @param element indica el elemento a borrar
+	 * @param position indica el elemento a borrar
 	 * @return verdadero o falso, indicando si se pudo o no, eliminar
 	 * Responsable: Cristian Galindo
 	 */
-	public boolean deleteElement( int element ) {
-		
-		
-		return false;
+	public boolean deleteElement( int position ) {
+
+		if (position < 0 || position >= array.length) {
+			return false;
+		}
+
+		//temporal
+		int temp = array[position];
+
+		for (int i = position; i < array.length - 1; i++) {
+			array[i] = array[i+1];
+		}
+
+		array[array.length-1] = temp;
+
+		position--;
+
+		return true;
+		}
 	}
 
-}
+

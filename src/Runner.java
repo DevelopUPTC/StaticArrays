@@ -1,6 +1,6 @@
-import java.util.Arrays;
-
 import model.HandlingArray;
+
+import java.util.Arrays;
 
 public class Runner {
 
@@ -19,6 +19,8 @@ public class Runner {
 		
 		System.out.println("\nMétodo sortInsertion");
 		System.out.println( Arrays.toString(handlingArray.sortInsertion()) );
+
+		System.out.println(handlingArray.deleteElement(5));
 
 	}
 
