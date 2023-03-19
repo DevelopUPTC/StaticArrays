@@ -143,7 +143,7 @@ public class HandlingArray {
 	 * @return la posición del elemento, o -1 cuando no existe
 	 * responsable: Julián Arias
 	 */
-	public int buscarSecuencial(int[] listado, int valor) {
+	public int findElement(int[] listado, int valor) {
 		for(int i=0;i<listado.length;i++) {
 			if(listado[i]==valor) {
 				return i;
