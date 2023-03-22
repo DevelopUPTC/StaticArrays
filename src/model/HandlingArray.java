@@ -155,7 +155,21 @@ public class HandlingArray {
 	 */
 	public int findElementBinary(int element) {
 		
-		return 0;
+		int[] sorted = sortInsertion().clone();
+		int begin = 0;
+		int end = position - 1;
+		while( begin <= end ) {
+			int medium = ( begin + end ) / 2;
+			if( sorted[ medium ] == element ) {
+				return medium;
+			}else if( element > sorted[ medium ] ) {
+				begin = medium + 1;
+			}else {
+				end = medium - 1;
+			}
+		}
+		
+		return -1;
 	}
 	
 	/**

@@ -66,7 +66,20 @@ class HandlingArrayTest {
 
 	@Test
 	void testFindElementBinary() {
-		fail("Not yet implemented");
+		int[] vec = new int[] {34,10,5,54,79,213,210,9,7,2,98,43};
+		//[2 - 5 - 7 - 9 -10 - 34 - 43 - 54 - 79 - 98 - 210 - 213]
+		HandlingArray handling = new HandlingArray( vec );
+		//assertEquals(0, handling.findElementBinary(2));
+		//assertEquals(11, handling.findElementBinary(213));
+		//assertEquals(-1, handling.findElementBinary(2543));
+		//assertEquals(1, handling.findElementBinary(5));
+		//assertEquals(2, handling.findElementBinary(7));
+		//assertEquals(3, handling.findElementBinary(9));
+		handling.addElement(69);
+		assertEquals(18, handling.getArray().length);
+		System.out.println( Arrays.toString( handling.getArray()));
+		//assertEquals(213,handling.getArray()[12]);
+		assertEquals(12, handling.findElementBinary(213));
 	}
 
 	@Test
