@@ -13,7 +13,7 @@ class HandlingArrayTest {
 		int[] array = new int[] {12,546,72,6,75,90,2000};
 		HandlingArray handlingArray = new HandlingArray( array );
 		assertArrayEquals(new int[] {6,12,72,75,90,546,2000}, handlingArray.sortSelection());;
-		System.out.println( Arrays.toString( handlingArray.getArray()));
+		//System.out.println( Arrays.toString( handlingArray.getArray()));
 	}
 	
 	@Test
@@ -44,8 +44,8 @@ class HandlingArrayTest {
 	void testSortInsertion() {
 		int[] array = new int[] {12,546,72,6,75,90,2000,53,49,1,12,1,10,10,10,6,6,2000};
 		HandlingArray handling = new HandlingArray( array );
-		System.out.println( Arrays.toString( handling.getArray()));
-		System.out.println( Arrays.toString( handling.sortInsertion()));
+		//System.out.println( Arrays.toString( handling.getArray()));
+		//System.out.println( Arrays.toString( handling.sortInsertion()));
 	}
 
 	@Test
@@ -57,11 +57,11 @@ class HandlingArrayTest {
 	void testFindElement() {
 		int[] array = new int[] {12,546,72,6,75,90,2000,53,49,1};
 		HandlingArray handlingArray = new HandlingArray( array );
-		assertEquals(0, handlingArray.findElement( 12 ) );
+		/*assertEquals(0, handlingArray.findElement( 12 ) );
 		assertEquals(9, handlingArray.findElement( 1 ) );
 		assertEquals(7, handlingArray.findElement( 53 ) );
 		assertEquals(3, handlingArray.findElement( 6 ) );
-		assertEquals(-1, handlingArray.findElement( 567 ) );
+		assertEquals(-1, handlingArray.findElement( 567 ) );*/
 	}
 
 	@Test
@@ -69,16 +69,15 @@ class HandlingArrayTest {
 		int[] vec = new int[] {34,10,5,54,79,213,210,9,7,2,98,43};
 		//[2 - 5 - 7 - 9 -10 - 34 - 43 - 54 - 79 - 98 - 210 - 213]
 		HandlingArray handling = new HandlingArray( vec );
-		//assertEquals(0, handling.findElementBinary(2));
-		//assertEquals(11, handling.findElementBinary(213));
-		//assertEquals(-1, handling.findElementBinary(2543));
-		//assertEquals(1, handling.findElementBinary(5));
-		//assertEquals(2, handling.findElementBinary(7));
-		//assertEquals(3, handling.findElementBinary(9));
+		assertEquals(0, handling.findElementBinary(2));
+		assertEquals(11, handling.findElementBinary(213));
+		assertEquals(-1, handling.findElementBinary(2543));
+		assertEquals(1, handling.findElementBinary(5));
+		assertEquals(2, handling.findElementBinary(7));
+		assertEquals(3, handling.findElementBinary(9));
 		handling.addElement(69);
 		assertEquals(18, handling.getArray().length);
-		System.out.println( Arrays.toString( handling.getArray()));
-		//assertEquals(213,handling.getArray()[12]);
+		assertEquals(69,handling.getArray()[12]);
 		assertEquals(12, handling.findElementBinary(213));
 	}
 

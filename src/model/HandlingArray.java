@@ -112,7 +112,7 @@ public class HandlingArray {
 		int position;
 		int aux;
 		
-		for(int i=0; i<arraySort.length; i++) {
+		for(int i=0; i < this.position; i++) {
 			position = i;
 			aux=arraySort[i];
 		
@@ -156,7 +156,7 @@ public class HandlingArray {
 	 * 
 	 * @param element
 	 * @return
-	 * responsable: Jeferson Madera
+	 * responsable: Jairo Riaño
 	 */
 	public int findElementBinary(int element) {
 		
