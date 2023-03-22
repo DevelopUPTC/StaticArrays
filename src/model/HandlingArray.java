@@ -2,6 +2,7 @@ package model;
 
 import java.util.Arrays;
 import java.util.Random;
+
 /**
  * Clase que gestiona un arreglo de enteros
  * @author jairo
@@ -62,26 +63,57 @@ public class HandlingArray {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Método que ordena el arreglo por medio del algoritmo de Selección
+	 * @return  un arreglo con los elementos ordenados
 	 * responsable: Andrés Mateus
 	 */
 	public int[] sortSelection() {
-		int[] arraySort = new int[ array.length ];
+		int[] arraySort = array.clone();
 		
-		return arraySort;
+		int i,j,menor,pos,tmp;
+		for (i = 0; i < arraySort.length; i++) {
+			menor=arraySort[i];
+			pos=i;
+			for (j = i+1; j < arraySort.length; j++) {
+				if(arraySort[j]<menor){
+					menor=arraySort[j];
+					pos=j;
+				}
+			}
+			if(pos !=i){
+				tmp=arraySort[i];
+				arraySort[i]=arraySort[pos];
+				arraySort[pos]=tmp;
+			}
+		}
+		
+		return arraySort.clone();
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Metodo que ordena el arreglo por medio del ordenamiento de burbuja
+	 * @return arreglo ordenado de forma ascenente
 	 * responsable: Dumar Malpica
 	 */
-	public int[] sortBurbble() {
-		int[] arraySort = new int[ array.length ];
+	public int []sortBurbble() {
+		int[] arrayBurble = array.clone();
+		int aux;
 		
-		return arraySort;
+		for (int i = 0; i < (arrayBurble.length-1); i++) {
+			for (int j = 0; j < (arrayBurble.length-1); j++) {
+				if (arrayBurble[j]>arrayBurble[j+1]) {
+					aux=arrayBurble[j];
+					arrayBurble[j]=arrayBurble[j+1];
+					arrayBurble[j+1]=aux;
+					
+				}	
+			}
+		}
+		
+		return arrayBurble.clone();
 	}
+
+	
 	
 	
 	/**
@@ -90,8 +122,21 @@ public class HandlingArray {
 	 * responsable: Mauricio Vargas
 	 */
 	public int[] sortInsertion() {
-		int[] arraySort = new int[ array.length ];
+		//int[] arraySort = new int[array.length];
+		int[] arraySort = array.clone();
+		int position;
+		int aux;
 		
+		for(int i=0; i<arraySort.length; i++) {
+			position = i;
+			aux=arraySort[i];
+		
+			while((position>0) && arraySort[position-1] > aux){
+				arraySort[position] = arraySort[position-1];
+				position--;
+			}
+			arraySort[position] = aux;
+		}	
 		return arraySort;
 	}
 	
@@ -155,14 +200,28 @@ public class HandlingArray {
 	
 	/**
 	 * Método que elimina un elemento del arreglo
-	 * @param element indica el elemento a borrar
+	 * @param position indica el elemento a borrar
 	 * @return verdadero o falso, indicando si se pudo o no, eliminar
 	 * Responsable: Cristian Galindo
 	 */
-	public boolean deleteElement( int element ) {
-		
-		
-		return false;
+	public boolean deleteElement( int position ) {
+
+		if (position < 0 || position >= array.length) {
+			return false;
+		}
+
+		//temporal
+		int temp = array[position];
+
+		for (int i = position; i < array.length - 1; i++) {
+			array[i] = array[i+1];
+		}
+
+		array[array.length-1] = temp;
+
+		position--;
+
+		return true;
+		}
 	}
 
-}
