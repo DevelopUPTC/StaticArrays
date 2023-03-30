@@ -1,4 +1,4 @@
-package test;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -94,7 +94,7 @@ class HandlingArrayTest {
 		//2		1	1	3	1	1	2		1	1	2	3
 		
 		HandlingArray handlingArray = new HandlingArray( array );
-		assertEquals(1,handlingArray.countElements()[2][1]);
+		assertEquals(1,handlingArray.countElements()[1][1]);
 		
 		assertEquals(11,handlingArray.countElements()[0].length);
 		assertEquals(12,handlingArray.countElements()[0][0]);

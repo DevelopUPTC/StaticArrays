@@ -166,7 +166,6 @@ public class HandlingArray {
 		}
 		
 		return arraySort;
-		return arraySort;
 	}
 	
 	/**
