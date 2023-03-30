@@ -106,7 +106,9 @@ class HandlingArrayTest {
 
 	@Test
 	void testShowArray() {
-		fail("Not yet implemented");
+		int[] array = new int[] {12,546,72,6,75,90,2000,53,49,1};
+		HandlingArray handlingArray = new HandlingArray( array );
+		assertEquals("[12,546,72,6,75,90,2000,53,49,1]", handlingArray.showArray());
 	}
 
 }
