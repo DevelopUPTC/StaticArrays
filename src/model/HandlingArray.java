@@ -131,8 +131,27 @@ public class HandlingArray {
 	 * responsable: Daniel Espinosa
 	 */
 	public int[] sortShell() {
-		int[] arraySort = new int[ array.length ];
 		
+		int[] arraySort = new int[ array.length ];
+		arraySort=array;
+		int i,j,menor,pos,tmp;
+		for (i = 0; i < arraySort.length; i++) {
+			menor=arraySort[i];
+			pos=i;
+			for (j = i+1; j < arraySort.length; j++) {
+				if(arraySort[j]<menor){
+					menor=arraySort[j];
+					pos=j;
+				}
+			}
+			if(pos !=i){
+				tmp=arraySort[i];
+				arraySort[i]=arraySort[pos];
+				arraySort[pos]=tmp;
+			}
+		}
+		
+		return arraySort;
 		return arraySort;
 	}
 	
