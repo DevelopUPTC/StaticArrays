@@ -58,7 +58,7 @@ public class HandlingArray {
 		array = new int[ array.length ];
 		position = 0;
 		for( int i = 0 ; i < array.length ; i++ ) {
-			addElement( new Random().nextInt(99)+1) ;
+			addElement( new Random().nextInt(9)+1) ;
 		}
 	}
 	
@@ -142,7 +142,7 @@ public class HandlingArray {
 	 * @return la posición del elemento, o -1 cuando no existe
 	 * responsable: Julián Arias
 	 */
-	public int findElement(int[] listado, int valor) {
+	/*public int findElement(int valor) {
 		for(int i=0;i<listado.length;i++) {
 			if(listado[i]==valor) {
 				return i;
@@ -150,7 +150,7 @@ public class HandlingArray {
 			}
 		}
 		return -1;
-	}
+	}*/
 	
 	/**
 	 * 
@@ -177,6 +177,30 @@ public class HandlingArray {
 		return -1;
 	}
 	
+	public int findElement(int[] listado, int valor) {
+		for(int i = 0 ; i < listado.length ; i++) {
+			if(listado[i] == valor) {
+				
+				return i;
+				//devolvemos solo la posición donde se encuentra
+			}
+		}
+		
+		return -1;
+	} 
+	
+	private int[][] fillMatriz(int[] nums, int[] sums){
+		
+		int[][] matriz = new int[2][nums.length];
+		
+		for( int i = 0 ; i < nums.length ; i++ ) {
+			matriz[0][i] = nums[i];
+			matriz[1][i] = sums[i];
+		}
+				
+		return matriz;
+	}
+	
 	/**
 	 * 
 	 * @return
@@ -184,7 +208,25 @@ public class HandlingArray {
 	 */
 	public int[][] countElements(){
 		
-		return null;
+		int[] numbers = new int[position];
+		int[] sums = new int[position];
+		
+		numbers[0] = array[0];
+		sums[0] = 1;
+		
+		int posNumbers = 1;
+		
+		for( int i = 1 ; i < position ; i++ ) {
+			int pos = findElement( numbers, array[i]); 
+			if( pos != -1 ) {
+				sums[pos] += 1;
+			}else {
+				numbers[posNumbers] = array[i];
+				sums[posNumbers++] = 1;
+			}
+		}
+		
+		return fillMatriz(Arrays.copyOf(numbers, posNumbers), Arrays.copyOf(sums, posNumbers));
 	}
 	
 	public int[] getArray() {

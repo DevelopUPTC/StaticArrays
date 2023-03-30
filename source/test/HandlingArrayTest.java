@@ -83,24 +83,19 @@ class HandlingArrayTest {
 
 	@Test
 	void testCountElements() {
-		//12 2
-		//546 1
-		//72 1
-		//6 3
-		//75 1
-		//90 1
-		//2000 2
-		//53 1
-		//49 1
-		//1 2
-		//10 3
+
 		int[] array = new int[] {12,546,72,6,75,90,2000,53,49,1,12,1,10,10,10,6,6,2000};
-		HandlingArray handlingArray = new HandlingArray( array );
-		assertEquals(72,handlingArray.countElements()[2][0]);
-		assertEquals(1,handlingArray.countElements()[2][1]);
+		//12	546	72	6	75	90	2000	53	49	1	10
+		//2		1	1	3	1	1	2		1	1	2	3
 		
-		assertEquals(6,handlingArray.countElements()[3][0]);
-		assertEquals(3,handlingArray.countElements()[3][1]);
+		HandlingArray handlingArray = new HandlingArray( array );
+		
+		assertEquals(11,handlingArray.countElements()[0].length);
+		assertEquals(12,handlingArray.countElements()[0][0]);
+		assertEquals(2,handlingArray.countElements()[1][0]);
+		
+		assertEquals(6,handlingArray.countElements()[0][3]);
+		assertEquals(3,handlingArray.countElements()[1][3]);
 		
 	}
 
