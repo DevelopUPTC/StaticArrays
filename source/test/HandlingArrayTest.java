@@ -1,3 +1,5 @@
+package test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
@@ -37,7 +39,10 @@ class HandlingArrayTest {
 
 	@Test
 	void testSortBurbble() {
-		fail("Not yet implemented");
+		int[] array= new int[]{35,45,8,7,5,13,12};
+		HandlingArray handlingArray = new HandlingArray( array );
+		assertArrayEquals(new int[] {5,7,8,12,13,35,45}, handlingArray.sortBurbble());;
+
 	}
 
 	@Test
@@ -89,6 +94,7 @@ class HandlingArrayTest {
 		//2		1	1	3	1	1	2		1	1	2	3
 		
 		HandlingArray handlingArray = new HandlingArray( array );
+		assertEquals(1,handlingArray.countElements()[2][1]);
 		
 		assertEquals(11,handlingArray.countElements()[0].length);
 		assertEquals(12,handlingArray.countElements()[0][0]);
@@ -108,5 +114,4 @@ class HandlingArrayTest {
 	void testShowArray() {
 		fail("Not yet implemented");
 	}
-
 }

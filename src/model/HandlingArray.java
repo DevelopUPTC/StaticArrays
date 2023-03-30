@@ -86,19 +86,33 @@ public class HandlingArray {
 			}
 		}
 		
-		return arraySort;
+		return arraySort.clone();
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Metodo que ordena el arreglo por medio del ordenamiento de burbuja
+	 * @return arreglo ordenado de forma ascenente
 	 * responsable: Dumar Malpica
 	 */
-	public int[] sortBurbble() {
-		int[] arraySort = new int[ array.length ];
+	public int []sortBurbble() {
+		int[] arrayBurble = array.clone();
+		int aux;
 		
-		return arraySort;
+		for (int i = 0; i < (arrayBurble.length-1); i++) {
+			for (int j = 0; j < (arrayBurble.length-1); j++) {
+				if (arrayBurble[j]>arrayBurble[j+1]) {
+					aux=arrayBurble[j];
+					arrayBurble[j]=arrayBurble[j+1];
+					arrayBurble[j+1]=aux;
+					
+				}	
+			}
+		}
+		
+		return arrayBurble.clone();
 	}
+
+	
 	
 	
 	/**
@@ -270,5 +284,3 @@ public class HandlingArray {
 		return true;
 		}
 	}
-
-
